@@ -92,7 +92,7 @@ class Calendar:
             raise Exception(f"An error just occurred")
         df = pd.read_csv(
             filepath_or_buffer=io.StringIO(r.content.decode("utf-8")),
-            na_values=np.NaN
+            na_values=np.nan
         )
         self.calendar: pd.DataFrame = df
         print(f"Number of events: {len(df)}")
